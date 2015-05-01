@@ -75,12 +75,16 @@ class ViewController: UIViewController {
         button.layer.borderWidth = 1
         
         //ボタンをタップした時に実行するメソッドを指定
-        //button.addTarget(self, action: "tapped:", forControlEvents:.TouchUpInside)
+        button.addTarget(self, action: "tapped:", forControlEvents:.TouchUpInside)
         
         //viewにボタンを追加する
         self.view.addSubview(button)
 
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    func tapped(button :UIButton) {
+      NSLog("tapped")
     }
 
     override func didReceiveMemoryWarning() {
